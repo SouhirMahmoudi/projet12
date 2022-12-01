@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Routes, Switch, Route } from 'react-router-dom';
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import ErrorPage from "./Pages/ErrorPage.jsx";
+import HomePage from './Pages/HomePage.jsx';
+import UserPage from "./Pages/UserPage.jsx";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Header/>
+    <Sidebar/>
+    <Routes>
+    
+        <Route path="/" element={<HomePage />} />
+        <Route path="/user/:id" element={<UserPage />} />
+        <Route path="*" element={<ErrorPage />}/>
+        
+        </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
