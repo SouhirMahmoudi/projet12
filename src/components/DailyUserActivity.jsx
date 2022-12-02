@@ -124,6 +124,7 @@ const Wrapper = styled.div`
 const Head = styled.div`
     display: flex;
     justify-content: space-between;
+    width: 96%;
 	`
 
 const Title = styled.h2`

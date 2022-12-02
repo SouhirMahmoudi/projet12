@@ -27,7 +27,8 @@ const Head = styled.header`
   h1 {
     font-weight: 600;
     font-size:48px;
-    margin-bottom:40px;
+    margin-bottom:30px;
+    margin-top:0px;
   }
 `;
 

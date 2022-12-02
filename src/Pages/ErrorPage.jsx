@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 function ErrorPage() {
     return (
+      
         <Main>
 				<Title>404</Title>
 				<p> Oups ! La page que vous demandez n'existe pas.</p>

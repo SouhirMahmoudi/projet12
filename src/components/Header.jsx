@@ -18,35 +18,44 @@ return  (
 
 }
 const Head = styled.header`
-  position: relative;
+position: relative;
   display: flex;
   width: 100%;
-  height: 91px;
+  height: 5rem;
+
   background: #020203;
   padding: 0 87px 0 29px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
   img {
     width: 178px;
-    margin-right: 150px;
+    margin-right: 130px;
     @media (max-width: 1025px) {
       margin-right: 70px;
     }
   }
 `;
+
 const Nav = styled.nav`
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+height: 100%;
+align-items: center;
+align-content: center;
+justify-content: space-between;
+width: 100%;
+font-weight: 500;
+text-align: center;
   a {
+    padding: 0.5rem 2rem;
     color: white;
-    font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
+    @media (max-width: 1340px) {
+      font-size: 1.25rem;
+    }
   }
- 
+  `
   
-`;
+;
 
 export default Header;

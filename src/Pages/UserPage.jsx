@@ -14,6 +14,8 @@ import UserInfos from "../components/UserInfos.jsx";
 import UserAverageSessions from "../components/UserAverageSessions";
 import { getUserInfos} from "../Services/DataManger";
 import ErrorPage from "./ErrorPage";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 
 /**Render the dashboard
  */
@@ -28,20 +30,6 @@ useEffect(()=>{
 
 },[SetUserInfos, id])
 
-
-
-
-/*const[UAverageSessions , SetUserAverageSessions] = useState({})
-
-useEffect(()=>{
-  getUserAVerageSessions(id).then(data=>SetUserAverageSessions(data))
-
-}, [SetUserAverageSessions, id])*/
-/*const UserActivityData = getUserActivity(id);
-    const UserPerformanceData = getUserPerformance(id);
-    const UserAverageSessionsData = getUserAVerageSessions(id);
-    const UserData = getUserInfos(id);
-    console.log(UserActivityData,UserPerformanceData, UserAverageSessionsData,UserData)*/
     console.log(UInfos)
 
     return UInfos === undefined ? (
@@ -51,8 +39,135 @@ useEffect(()=>{
       
     
    : ( 
-    <Main>  
-    <Container> 
+    <div>
+    <Header/>
+<DashboardContainer>
+<Sidebar/>
+        <MainContent>
+            <UserInfos name={UInfos.userInfos.firstName} />
+          <ContentGrid>
+            <ChartsGrid>
+              <MainChart>
+               <DailyUserActivity  />
+              </MainChart>
+              <UserAverageSessions />
+              <UserPerformance />
+              <ScoreChart/>
+            </ChartsGrid>
+
+          <aside>
+            <KeyData
+              icon={caloriesIcon}
+              info={`${UInfos.keyData.calorieCount}kCal`}
+              text="Calories"
+            />
+            <KeyData
+              icon={proteinsIcon}
+              info={`${UInfos.keyData.proteinCount}g`}
+              text="Proteines"
+            />
+            <KeyData
+              icon={glucidesIcon}
+              info={`${UInfos.keyData.carbohydrateCount}g`}
+              text="Glucides"
+            />
+            <KeyData
+              icon={lipidesIcon}
+              info={`${UInfos.keyData.lipidCount}g`}
+              text="Lipides"
+            />
+          </aside>
+          </ContentGrid>
+        </MainContent>
+      </DashboardContainer>
+      </div>
+  );
+};
+
+const DashboardContainer = styled.main`
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+`;
+
+const MainContent = styled.section`
+  padding: 3rem 5rem;
+  @media (max-width: 1340px) {
+    padding: 1.5rem 2rem;
+  }
+`;
+
+
+
+const ContentGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  @media (max-width: 1340px) {
+    gap: 1rem;
+  }
+`;
+
+const ChartsGrid = styled.div`
+  grid-column: 1/4;
+  display: grid;
+  grid-template: 20rem 16rem / repeat(3, 1fr);
+  gap: 5rem;
+  @media (max-width: 1340px) {
+    grid-template: 18rem 14rem / repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+`;
+
+const MainChart = styled.div`
+  grid-column: 1/4;
+  margin-bottom: -78px;
+`;
+
+/*const Main = styled.div`
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 835px;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 0;
+    @media (max-width: 1208px) {
+      flex-direction: row;
+      margin: auto 0;
+      margin-right: 6em;
+    }
+    > div {
+      margin: 20px 5px;
+    }
+  }
+`;
+
+const Charts = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  justify-content: space-between;
+`;*/
+
+export default UserPage;
+/*<Main>  
+    
       <UserInfos name={UInfos.userInfos.firstName} />
         <Content>
           <section>
@@ -86,52 +201,4 @@ useEffect(()=>{
             />
           </aside>
         </Content>
-      </Container> 
-    </Main>
-  );
-};
-
-
-const Main = styled.main`
- 
-`;
-const Container = styled.div`
-  max-width: 1240px;
-  width: 100%;
-  margin: auto;
-  margin-top: 2%;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  aside {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 835px;
-    flex-direction: column;
-    margin: auto;
-    margin-left: 0;
-    @media (max-width: 1208px) {
-      flex-direction: row;
-      margin: auto 0;
-      margin-right: 6em;
-    }
-    > div {
-      margin: 20px 5px;
-    }
-  }
-`;
-
-const Charts = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
-  justify-content: space-between;
-`;
-
-export default UserPage;
+    </Main>*/

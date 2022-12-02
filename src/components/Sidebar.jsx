@@ -9,7 +9,6 @@ import { NavLink } from "react-router-dom";
 function Sidebar () {
   return (
     <Container>
-      <Nav>
         <Wrapper>
           <NavLink to="#">
             <img src={iconMeditation} alt="Meditation" />
@@ -25,7 +24,6 @@ function Sidebar () {
           </NavLink>
         </Wrapper>
         <NavText>Copyright, SportSee 2020</NavText>
-      </Nav>
     </Container>
   );
 };
@@ -33,49 +31,43 @@ function Sidebar () {
 const Container = styled.div`
   overflow: hidden;
   position: relative;
-`;
-
-const Nav = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 117px;
-  height: 100vh;
+  display: grid;
+  grid-template-rows:6.5fr 2fr;
+  color: white;
+  width:117px;
   background: #020203;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
+  @media (max-width: 1340px) {
+    max-height: 692px;
+  }
 `;
+
+
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 64px;
-  position: absolute;
-  top: 30%;
-  left: 26px;
-  a {
-    display: flex;
-    height: 64px;
-    width: 64px;
-    margin-bottom: 20px;
+  justify-content: center;
+  height: 100%;
+  a{
+    display:flex;
+    justify-content: center;
+  }
+  img {
+    padding: 0.5rem;
   }
 `;
 
 const NavText = styled.p`
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  position: absolute;
-  bottom: 59px;
-  left: 42px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 24px;
-  color: white;
-  margin: auto;
+display: flex;
+align-items: center;
+padding: 3rem 0;
+font-size: 0.8rem;
+writing-mode: vertical-lr;
+transform: rotate(180deg);
+@media (max-width: 1340px) {
+  padding: 2rem;
+}
 `;
 
 export default Sidebar;
