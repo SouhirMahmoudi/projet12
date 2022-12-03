@@ -3,6 +3,11 @@ import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/Logo.svg'
 
+/**
+     * Render the header of SportSee site web
+     * @return {JSX}
+    **/
+
 function Header(){
 return  (
 <Head>
@@ -27,10 +32,13 @@ position: relative;
   padding: 0 87px 0 29px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
+  @media (max-width: 1300px) {
+    width: 120%;
+  }
   img {
     width: 178px;
     margin-right: 130px;
-    @media (max-width: 1025px) {
+    @media (max-width: 1300px) {
       margin-right: 70px;
     }
   }
@@ -42,7 +50,7 @@ height: 100%;
 align-items: center;
 align-content: center;
 justify-content: space-between;
-width: 100%;
+width: 75%;
 font-weight: 500;
 text-align: center;
   a {
@@ -50,7 +58,7 @@ text-align: center;
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
-    @media (max-width: 1340px) {
+    @media (max-width: 1300px) {
       font-size: 1.25rem;
     }
   }

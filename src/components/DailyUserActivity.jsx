@@ -2,11 +2,15 @@ import React from "react";
 import styled from 'styled-components';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,ResponsiveContainer} from "recharts";
 import ActivityTooltip from '../components/ActivityTooltip.jsx'
-import PropTypes from 'prop-types'; 
 import { useState, useEffect } from "react";
 import {getUserActivity} from '../Services/DataManger'
 import { useParams } from "react-router-dom";
 
+    
+    /**
+     * Render a BarChart with user activity Data 
+     * @return {JSX}
+    **/
 
 function DailyUserActivity() {
     const {id} = useParams();
@@ -16,18 +20,12 @@ function DailyUserActivity() {
       getUserActivity(id).then(data=>SetUserActivity(data))
     
     },[SetUserActivity, id ])
-    
-    /**
-     * Render a BarChart with user activity Data 
-    **/
 
      //format data.day
    for (let i = 0 ; i < UActivity.sessions.length ; i ++){
     UActivity.sessions[i].day = i + 1;
    }
-   console.log(UActivity.sessions, UActivity.sessions.length)
-
-//console.log(Data.length)
+   console.log(UActivity.sessions)
    
     return (
         <Wrapper>
@@ -106,8 +104,6 @@ function DailyUserActivity() {
         </Wrapper>
     );
 }
-//  ligne 44 <Tooltip content={<ActivityTooltip />} />
-//import ActivityTooltip from '../components/ActivityTooltip.js';
 
 const Wrapper = styled.div`
     margin-bottom: 3em;
@@ -116,9 +112,11 @@ const Wrapper = styled.div`
 	background-color: #fbfbfb;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
 	padding: 25px;
+ 
 	
-	@media (max-width: 1025px) {
+	@media (max-width: 1300px) {
       padding-left:0;
+      width:70%;
     }
 `
 const Head = styled.div`
@@ -157,7 +155,5 @@ const Info = styled.div`
     display: flex;
     align-items:center;
 `
-DailyUserActivity.propTypes={
-    data: PropTypes.array
-}
+
 export default DailyUserActivity;

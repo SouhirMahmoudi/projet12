@@ -5,6 +5,10 @@ import { useEffect , useState } from "react";
 import { useParams } from "react-router-dom";
 import {getUserPerformance} from "../Services/DataManger"
 
+/**
+     * Render a RadarChart with user performance
+     * @return {JSX}
+    **/
 
 
 function UserPerformance() {
@@ -29,7 +33,7 @@ return (
     </Container> );
 }
 
-export default UserPerformance;
+
 
 const Container = styled.div`
     position: relative;
@@ -38,3 +42,5 @@ const Container = styled.div`
 	background: #282D30;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
 	border-radius: 5px;`
+
+    export default UserPerformance;

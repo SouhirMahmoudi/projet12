@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 /**Render the userName
 * @param {string} name
+ * @return {JSX}
 */
 
 function UserInfos({name}) {
@@ -21,7 +22,7 @@ export default UserInfos;
 
 const Head = styled.header`
   margin-bottom: 40px;
-  @media (max-width: 1203px) {
+  @media (max-width: 1300px) {
 			margin-left: 2em;
 		}
   h1 {

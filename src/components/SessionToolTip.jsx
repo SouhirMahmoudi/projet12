@@ -3,6 +3,11 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 
+/** render a custom tooltype for the user average sessions lineChart
+ * @param  {Boolean} active
+ * @param  {array} payload
+ * * @return {JSX}
+ */
 
 function SessionsToolTip({ active, payload }) {
     if (active) {

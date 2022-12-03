@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @param {String} idUser 
+ * @returns {Array}
+ */
 async function getUserInfos(idUser){
     
 const result= await fetch("/DataMocked.json")

@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 import {getUserInfos} from '../Services/DataManger'
 import { useParams } from "react-router-dom";
     
+/**
+     * Render a pieChart with user score 
+     * @return {JSX}
+    **/
 function ScoreChart() {
   const {id} = useParams();
   const[UInfos , SetUserInfos] = useState({})

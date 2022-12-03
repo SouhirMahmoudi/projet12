@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 
-/** create a custom tooltype for the user activity barChart
+/** render a custom tooltype for the user activity barChart
  * @param  {Boolean} active
  * @param  {array} payload
+ * * @return {JSX}
  */
 
 function ActivityTooltip({active, payload}) {

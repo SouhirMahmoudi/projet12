@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 
 /** display icon with user infos 
- * //////////////////@param  {svg} icon
- * @param  {number} info
+ * @param  {string} icon
+ * @param  {string} info
  * @param  {string} text
  */
 function KeyData({icon,info,text}) {
@@ -22,9 +22,9 @@ function KeyData({icon,info,text}) {
 
 const Wrapper = styled.div`
     display:flex;
-    padding:2em;
-    @media (max-width: 1208px) {
-        padding:1em
+    padding:2rem;
+    @media (max-width: 1300px) {
+        padding-left:1rem
     }
 `
     
@@ -49,9 +49,9 @@ const InfosText = styled.p`
     color: #74798C;
 `
 KeyData.propTypes = {
-//  icon: PropTypes.string,/////////////////////
   info: PropTypes.string,
   text: PropTypes.string,
+  icon: PropTypes.string,
 }
 
 export default KeyData;

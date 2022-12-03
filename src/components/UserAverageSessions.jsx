@@ -6,6 +6,12 @@ import { getUserAVerageSessions } from '../Services/DataManger'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+/**
+     * Render a LineChart with user average sessions
+     * @return {JSX}
+    **/
+
+
 function UserAverageSessions() {
   const { id } = useParams();
 
@@ -69,6 +75,7 @@ function UserAverageSessions() {
     background: #ff0000;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
+    
   `;
 
   const Title = styled.h2`
@@ -80,4 +87,3 @@ function UserAverageSessions() {
   `;
 
   export default UserAverageSessions;
-  //  ligne 30

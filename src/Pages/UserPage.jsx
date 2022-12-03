@@ -17,8 +17,10 @@ import ErrorPage from "./ErrorPage";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 
-/**Render the dashboard
- */
+/**
+     * Render the dashboard
+     * @return {JSX}
+    **/
 
  
 function UserPage(){
@@ -87,6 +89,10 @@ useEffect(()=>{
 const DashboardContainer = styled.main`
   display: grid;
   grid-template-columns: 8rem 1fr;
+  width:100%;   
+  aside{
+    margin-left:50px;
+  }
 `;
 
 const MainContent = styled.section`
@@ -102,8 +108,8 @@ const ContentGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  @media (max-width: 1340px) {
-    gap: 1rem;
+  @media (max-width: 1300px) {
+    gap: 18.5rem;
   }
 `;
 
@@ -112,9 +118,10 @@ const ChartsGrid = styled.div`
   display: grid;
   grid-template: 20rem 16rem / repeat(3, 1fr);
   gap: 5rem;
-  @media (max-width: 1340px) {
+  @media (max-width: 1300px) {
     grid-template: 18rem 14rem / repeat(3, 1fr);
-    gap: 3rem;
+    gap: 5rem;
+    width:70%;
   }
 
 `;
@@ -122,6 +129,9 @@ const ChartsGrid = styled.div`
 const MainChart = styled.div`
   grid-column: 1/4;
   margin-bottom: -78px;
+  @media (max-width: 1340px) {
+   
+  }
 `;
 
 /*const Main = styled.div`

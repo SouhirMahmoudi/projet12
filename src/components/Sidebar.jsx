@@ -6,6 +6,12 @@ import iconMusculation from "../assets/iconMusculation.svg";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+
+/**
+     * Render the sideBar of SportSee site web
+     * @return {JSX}
+    **/
+   
 function Sidebar () {
   return (
     <Container>
@@ -35,10 +41,12 @@ const Container = styled.div`
   grid-template-rows:6.5fr 2fr;
   color: white;
   width:117px;
+  height:100%;
   background: #020203;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  @media (max-width: 1340px) {
-    max-height: 692px;
+  @media (max-width: 1300px) {
+    height:110%;
+
   }
 `;
 
@@ -65,7 +73,7 @@ padding: 3rem 0;
 font-size: 0.8rem;
 writing-mode: vertical-lr;
 transform: rotate(180deg);
-@media (max-width: 1340px) {
+@media (max-width: 1300px) {
   padding: 2rem;
 }
 `;

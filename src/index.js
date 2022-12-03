@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import ErrorPage from "./Pages/ErrorPage.jsx";
 import HomePage from './Pages/HomePage.jsx';
 import UserPage from "./Pages/UserPage.jsx";
@@ -12,14 +11,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    
-    <Routes>
-    
-        <Route path="/" element={<HomePage />} />
-        <Route path="/user/:id" element={<UserPage />} />
-        <Route path="*" element={<ErrorPage />}/>
-        
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/user/:id" element={<UserPage/>} />
+        <Route path="*" element={<ErrorPage/>} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
