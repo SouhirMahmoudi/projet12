@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { useState, useEffect } from "react";
-import {getUserInfos} from '../Services/DataManger'
+//import {getUserInfos} from '../Services/DataManger'
+import {getUserInfos} from '../Services/ApiManager'
 import { useParams } from "react-router-dom";
     
 /**

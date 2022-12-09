@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip } from "recharts";
 import SessionsToolTip from "../components/SessionToolTip.jsx"
-import { getUserAVerageSessions } from '../Services/DataManger'
+//import { getUserAVerageSessions } from '../Services/DataManger'
+import { getUserAVerageSessions } from '../Services/ApiManager'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 

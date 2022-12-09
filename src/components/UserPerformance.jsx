@@ -3,7 +3,8 @@ import {Radar,RadarChart,PolarGrid,PolarAngleAxis,ResponsiveContainer} from "rec
 import styled from "styled-components";
 import { useEffect , useState } from "react";
 import { useParams } from "react-router-dom";
-import {getUserPerformance} from "../Services/DataManger"
+//import {getUserPerformance} from "../Services/DataManger"
+import {getUserPerformance} from "../Services/ApiManager"
 
 /**
      * Render a RadarChart with user performance
