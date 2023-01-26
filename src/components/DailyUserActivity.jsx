@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,ResponsiveContainer} from "recharts";
 import ActivityTooltip from '../components/ActivityTooltip.jsx'
 import { useState, useEffect } from "react";
-import {getUserActivity} from '../Services/DataManger'
+//import {getUserActivity} from '../Services/DataManger'
+import {getUserActivity} from '../Services/ApiManager'
 import { useParams } from "react-router-dom";
 
     
