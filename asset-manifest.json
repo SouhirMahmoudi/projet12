@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Projet12/static/css/main.e6c13ad2.css",
+    "main.js": "/Projet12/static/js/main.c54faa25.js",
+    "static/js/787.bd60d6e2.chunk.js": "/Projet12/static/js/787.bd60d6e2.chunk.js",
+    "static/media/Logo.svg": "/Projet12/static/media/Logo.91308fbcbce811907c09885e1241b59f.svg",
+    "static/media/iconSwim.svg": "/Projet12/static/media/iconSwim.c135dfed9473b0728721ce9a4c20819a.svg",
+    "static/media/iconVelo.svg": "/Projet12/static/media/iconVelo.22f466fe8b96cfda1498781030e75542.svg",
+    "static/media/glucides-icon.svg": "/Projet12/static/media/glucides-icon.889f22d4f00c2b2c0c40f611730b8d4f.svg",
+    "static/media/lipides-icon.svg": "/Projet12/static/media/lipides-icon.e19d41cdc556eb8d6a6ffffb1f5bd372.svg",
+    "static/media/proteines-icon.svg": "/Projet12/static/media/proteines-icon.e23e2ae3a310fcfc323deac52f29420b.svg",
+    "static/media/iconMeditation.svg": "/Projet12/static/media/iconMeditation.e6da2f731117475422a8c38c6684702f.svg",
+    "index.html": "/Projet12/index.html",
+    "static/media/calories-icon.svg": "/Projet12/static/media/calories-icon.3067c742293e6d0833f654a885812c50.svg",
+    "static/media/iconMusculation.svg": "/Projet12/static/media/iconMusculation.c9f62cf1ca88da4b2dee77390edd0fe3.svg",
+    "main.e6c13ad2.css.map": "/Projet12/static/css/main.e6c13ad2.css.map",
+    "main.c54faa25.js.map": "/Projet12/static/js/main.c54faa25.js.map",
+    "787.bd60d6e2.chunk.js.map": "/Projet12/static/js/787.bd60d6e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c54faa25.js"
+  ]
+}
